@@ -34,7 +34,7 @@ public class FrontController {
     //@ResponseBody para indicar que el resultado del método lo vuelque en el cuerpo de la respuesta.
     public String home(){
         //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
-        return "menu";
+        return "localizacion";
     }
 
 }

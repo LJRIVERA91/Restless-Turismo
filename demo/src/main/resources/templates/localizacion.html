@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_55aeaabb143d98c606755677e0c78bff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+          <script>
+          #wsw{
+             background-color: yellow;
+          }
+          </script>
+          
+          
+          <!-- esta funcion traer las coordenadas del usuario-->
+          <a href='/localizacion'    class='btn btn-primary' onclick=finME()>ubicacion</a>
+          <div  id="mapii">   </div>
+          <!-- fin coordenadas del usuario--> 
+          
+          <div id="wsw">
+          <table class="table table-striped">
+
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>latitud:swwswdw</td>
+      <td>longitud :</td>
+      <td>temperatura=ddjds</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>sensacion termica:swwswdw</td>
+      <td>presion atmosdferica :</td>
+      <td>humedad=ddjds</td>
+    </tr>
+    <tr>
+      <th velocidade del viento="row">3</th>
+      <td>abundancia de nuebes:swwswdw</td>
+      <td>lugar :</td>
+      <td>codifo del lugar=ddjds</td>
+    </tr>
+  </tbody>
+</table>
+         
+          
+      
+          </div>
+
+         
+          
+    <script>
+        function finME(){
+            //<!-- condicion si no se logran geolocalizar imprimir en mappi soporta sino no soporta-->
+            var output= document.getElementById('mapii');
+            if(navigator.geolocation){
+                output.innerHTML ="<p>soporta</p>"; 
+                navigator.geolocation.getCurrentPosition(localiz,nolocaliz);
+                
+                }
+            else{output.innerHTML ="<p> no soporta</p>";}
+        }
+
+                
+        function localiz(pos){
+            console.log("entro----------------geo");
+            var latitude= pos.coords.latitude;
+            var longitude=pos.coords.longitude;
+            const dict_values = {latitude, longitude};
+            const s = JSON.stringify(dict_values);
+            console.log(s);
+            window.alert(s)//<!-- se genera alerta con coordenadas-->
+            //<!-- se envia por ajax las coordenadas-->
+                    $.ajax({
+                        url:"/localizacion",
+                        type:"POST",
+                        contentType: "application/json",
+                        data: JSON.stringify(s)});
+        }
+                    
+        function nolocaliz(err){
+            console.log("eerr----------------geo");
+            console.warn(err.message);
+            let msg;
+            switch(err.code) {
+                case err.PERMISSION_DENIED:
+                    msg = "No nos has dado permiso para obtener tu posición";
+                    break;
+                case err.POSITION_UNAVAILABLE:
+                    msg = "Tu posición actual no está disponible";
+                    break;
+                 case err.TIMEOUT:
+                     msg = "No se ha podido obtener tu posición en un tiempo prudencial";
+                     break;
+                 default:
+                     msg = "Error desconocido";
+                     break;
+            }
+            posElt.textContent = msg;
+        }
+    
+    </script>  
+   
+           
+        
+          
+          
+    
+            <div class="folium-map" id="map_55aeaabb143d98c606755677e0c78bff" ></div>
+        
+</body>
+<script>    
+    
+            var map_55aeaabb143d98c606755677e0c78bff = L.map(
+                "map_55aeaabb143d98c606755677e0c78bff",
+                {
+                    center: [6.1966791, -75.5625925],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_addafe8bd8bd36973242735f47305518 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var feature_group_12c796169d094fd5b4fcb0c20292994d = L.featureGroup(
+                {}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var tile_layer_cb4c4e87408d511c4331a512aa7511f3 = L.tileLayer(
+                "http://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
+                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_12c796169d094fd5b4fcb0c20292994d);
+        
+    
+            var feature_group_73715e2905321a177d184dc6ca202b62 = L.featureGroup(
+                {}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var tile_layer_5704dcf9adce91581e0df47072661a8f = L.tileLayer(
+                "http://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
+                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_73715e2905321a177d184dc6ca202b62);
+        
+    
+            var feature_group_c5f4655bf7a60a22f6702036d4f35dc2 = L.featureGroup(
+                {}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var tile_layer_6dc68ebd8ceaecbc9d249495f1911a92 = L.tileLayer(
+                "http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
+                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_c5f4655bf7a60a22f6702036d4f35dc2);
+        
+    
+            var feature_group_34fdabf361e19a9980a4794a1277d8b9 = L.featureGroup(
+                {}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var tile_layer_e818d837ab9d13da650a824c9a4606c0 = L.tileLayer(
+                "http://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
+                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_34fdabf361e19a9980a4794a1277d8b9);
+        
+    
+            var feature_group_46b3488c1943b112ae03fdd7afdaad2b = L.featureGroup(
+                {}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+    
+            var marker_6fbbd4bf879b492832bf566f56448518 = L.marker(
+                [6.1966791, -75.5625925],
+                {}
+            ).addTo(feature_group_46b3488c1943b112ae03fdd7afdaad2b);
+        
+    
+        var popup_9d74162267613a8640be8a14a54f32d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0abbc33747bdc8378b3d3bd830a02cce = $(`<div id="html_0abbc33747bdc8378b3d3bd830a02cce" style="width: 100.0%; height: 100.0%;">estas aqui</div>`)[0];
+            popup_9d74162267613a8640be8a14a54f32d7.setContent(html_0abbc33747bdc8378b3d3bd830a02cce);
+        
+
+        marker_6fbbd4bf879b492832bf566f56448518.bindPopup(popup_9d74162267613a8640be8a14a54f32d7)
+        ;
+
+        
+    
+    
+            var layer_control_38f00efbfe8a05705e3e4bb5dc561235 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_addafe8bd8bd36973242735f47305518,
+                },
+                overlays :  {
+                    "presion" : feature_group_12c796169d094fd5b4fcb0c20292994d,
+                    "vientos" : feature_group_73715e2905321a177d184dc6ca202b62,
+                    "Temperatura" : feature_group_c5f4655bf7a60a22f6702036d4f35dc2,
+                    "precipitation" : feature_group_34fdabf361e19a9980a4794a1277d8b9,
+                    "lago Chinchaicocha" : feature_group_46b3488c1943b112ae03fdd7afdaad2b,
+                },
+            };
+            L.control.layers(
+                layer_control_38f00efbfe8a05705e3e4bb5dc561235.base_layers,
+                layer_control_38f00efbfe8a05705e3e4bb5dc561235.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
+        
+</script>
