@@ -30,7 +30,7 @@ public class FrontController {
         return "index";
     }
 
-    @RequestMapping(method = RequestMethod.GET,value="/logear")
+    @RequestMapping(method = RequestMethod.GET,value="/inicio")
     //@ResponseBody para indicar que el resultado del método lo vuelque en el cuerpo de la respuesta.
     public String home(){
         //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
