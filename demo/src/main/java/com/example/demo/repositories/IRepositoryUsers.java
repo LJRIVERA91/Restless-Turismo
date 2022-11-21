@@ -18,5 +18,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface IRepositoryUsers extends CrudRepository <Users,Long> {
     //METODO CREADO PARA BUSCAR EMIL
- Users findBycorreo(String email);
+ //Users findBycorreo(String email);
+ Users findByapellido(String email);  //busca por apellido ya que alli esta alojado el correo del usuario
+
 }

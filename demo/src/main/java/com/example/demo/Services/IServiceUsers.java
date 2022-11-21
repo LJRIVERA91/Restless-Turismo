@@ -34,5 +34,7 @@ public interface IServiceUsers {
     public Users buscaryguardar(Map<String,Object> USERDATA);
 
 
-    Users buscar(String email);
+   // public Users buscar(String email);
+    public Users buscarApellido(String apellido); //busca por apellido,ya que alli esta alojado el correo
 }
+

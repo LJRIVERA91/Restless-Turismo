@@ -49,7 +49,9 @@ public class Users {
 
     //CONTRUCTOR VACIO: SE CREA PARA CUANDO EL USUARIO NO SABE QUE DATOS INGRESA ,SE LLENA SE ENVIA AL CONTRUCTOR Y SE HACE UNA OPERAION DETERMINADA
     //CONTRUCTOR VACIO: BUENA PRACTICA
-    public Users(String s){}
+    public Users(){
+
+    }
     public Users(String nombre,String apellido,String correo,long telefono,String contraseña){
         this.nombre=nombre;
         this.apellido=apellido;
@@ -61,6 +63,14 @@ public class Users {
 
     //SECCION 5__________________________________________GETTER AND SETTER_________________________________________________________________
 
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;

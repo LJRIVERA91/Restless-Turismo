@@ -84,7 +84,7 @@ public class ImpleServiceUsers implements IServiceUsers{
     @Override
     public Users buscaryguardar(Map<String,Object> USERDATA) {
         String email= (String)USERDATA.get("email");
-        Users user =buscar(email);
+        Users user =buscarApellido(email);
         if (user==null){
             String name= (String)USERDATA.get("nickmname");
             String image= (String)USERDATA.get("picture");
@@ -97,12 +97,17 @@ public class ImpleServiceUsers implements IServiceUsers{
 
         return user;
     }
-
     @Override
-    public Users buscar(String email) {
+    public Users buscarApellido(String apellido) {
+
+        return this.RepositoryUsers.findByapellido(apellido); //cambie correo por apellido
+    }
+
+   /* public Users buscar(String email) {
 
         return this.RepositoryUsers.findBycorreo(email);
-    }
+    }*/
+
 
 
 
