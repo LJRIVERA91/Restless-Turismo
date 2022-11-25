@@ -43,6 +43,8 @@ public class FrontController {
     public String index(){
         //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
         return "mapa";
+        //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
+        //return  "redirect:/booking/login/{Apellido}";
     }
 
     @RequestMapping(value = "/booking/login/{Apellido}",method = RequestMethod.GET,produces="application/json")
@@ -83,8 +85,6 @@ public class FrontController {
         if(users!=null) {
             model.addAttribute("id", users.getId());
         }
-
-
         return "reserva";
     }
 

@@ -26,10 +26,11 @@ public class BookingsController {
         }
 
         @PostMapping("/booking")
-        public RedirectView createBooking(@ModelAttribute @DateTimeFormat(pattern = "YYYY-MM-DD") Bookings booking, Model model){
+        public RedirectView createBooking(@ModelAttribute @DateTimeFormat(pattern = "YYYY-MM-DD") Bookings booking,Model model){
                     model.addAttribute(booking);
                     this.service.save(booking);
                     System.out.println("Se guardo reserva con exito");
                     return new RedirectView("/inicio1");
+
         }
 }

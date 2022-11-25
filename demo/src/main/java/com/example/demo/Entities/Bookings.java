@@ -35,11 +35,18 @@ public class Bookings {
     //COLUMNA LLAVE FORANES (FK)
     @JoinColumn(name="Booking_Users")
     //UNIDO AL OBJETO Users que es una entidad
-    Users user;
+   private  Users user;
     //SECCION 4__________________________________________CONTRUCTOR_______________________________________________________________
+    @ManyToOne
+    @JoinColumn(name="id_hotel")
+   private Hotel hotel;
+
+    @ManyToOne
+    @JoinColumn(name="id_restaurante")
+    private Restaurante restaurante;
 
     public Bookings(){
-
+            //user= new Users();
     }
 
     public Bookings(LocalDate fecha, String hora, String descripcion, Users user) {
@@ -90,5 +97,21 @@ public class Bookings {
 
     public void setUser(Users user) {
         this.user = user;
+    }
+
+    public Hotel getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(Hotel hotel) {
+        this.hotel = hotel;
+    }
+
+    public Restaurante getRestaurante() {
+        return restaurante;
+    }
+
+    public void setRestaurante(Restaurante restaurante) {
+        this.restaurante = restaurante;
     }
 }

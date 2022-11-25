@@ -1,11 +1,10 @@
 package com.example.demo.Entities;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 @Entity
 
-@Table(name="hotel")
-public class Hotel {
+@Table(name="restaurante")
+public class Restaurante {
     @Id
     //@GeneratedValue :LE DA UN VALOR AUTOMATICO AL ATRIBUTO DEACUERDO A UN FUNCION EN ESTA CASO AUTO INCREMENTANDO
     @GeneratedValue(strategy = GenerationType.AUTO )
@@ -27,21 +26,17 @@ public class Hotel {
     @Column(name = "contacto")
     private String contacto;
 
-    //constructores
-
-    public  Hotel(){
+    public Restaurante(){
 
     }
 
-    public Hotel(String nombre, String imagen, String categoria, String direccion, String contacto) {
+    public Restaurante(String nombre, String imagen, String categoria, String direccion, String contacto) {
         this.nombre = nombre;
         this.imagen = imagen;
         this.categoria = categoria;
         this.direccion = direccion;
         this.contacto = contacto;
     }
-    //SECCION _________________________________________GETTER AND SETTER_______________
-
 
     public long getId() {
         return id;

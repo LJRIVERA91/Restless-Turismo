@@ -9,14 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-<div class="px-4 py-5 my-5 text-center d-flex flex-column align-items-center">
+<div class="px-4 py-5 my-5 text-align-center d-flex flex-column align-items-center">
     <form th:action="@{/booking}" th:method="post" th:object="${booking}" class="d-flex flex-column gap-3 align-items-center">
         <input th:field="*{descripcion}"   class="form-control" type="text" placeholder="Descripcion"/>
         <input th:field="*{fecha}" class="form-control" type="date">
         <input th:field="*{hora}" class="form-control" type="time">
-        <input th:value="${id}"  th:field="*{user}" type="text" class="form-control" placeholder="id-user" disabled>
+        <input th:field="*{user}" th:value="${id}" class="form-control" type="hidden">
+        <h1 th:text="${id}"></h1>
         <button  class="btn btn-primary" type="submit">Reservar</button>
-
     </form>
 </div>
 
