@@ -42,8 +42,8 @@ public class Bookings {
    private Hotel hotel;
 
     @ManyToOne
-    @JoinColumn(name="id_restaurante")
-    private Restaurante restaurante;
+    @JoinColumn(name="id_restaurant")
+    private Restaurant restaurante;
 
     public Bookings(){
             //user= new Users();
@@ -107,11 +107,11 @@ public class Bookings {
         this.hotel = hotel;
     }
 
-    public Restaurante getRestaurante() {
+    public Restaurant getRestaurante() {
         return restaurante;
     }
 
-    public void setRestaurante(Restaurante restaurante) {
+    public void setRestaurante(Restaurant restaurante) {
         this.restaurante = restaurante;
     }
 }

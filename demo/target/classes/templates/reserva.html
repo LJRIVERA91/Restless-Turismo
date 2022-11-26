@@ -14,7 +14,7 @@
         <input th:field="*{descripcion}"   class="form-control" type="text" placeholder="Descripcion"/>
         <input th:field="*{fecha}" class="form-control" type="date">
         <input th:field="*{hora}" class="form-control" type="time">
-        <input th:field="*{user}" th:value="${id}" class="form-control" type="hidden">
+        <input th:field="*{user}" id="user" class="form-control" type="hidden">
         <h1 th:text="${id}"></h1>
         <button  class="btn btn-primary" type="submit">Reservar</button>
     </form>
