@@ -28,7 +28,7 @@ public class Bookings {
 
     //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
 
-    //ManyToOne: DEFINICION
+
     //ManyToOne: DEFINICION  Many: muchas facturas (la clase facturas)
     //ManyToOne: DEFINICION  One: un Usuario (la variable Users)
     @ManyToOne
@@ -44,6 +44,7 @@ public class Bookings {
     @ManyToOne
     @JoinColumn(name="id_restaurante")
     private Restaurante restaurante;
+//SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
 
     public Bookings(){
             //user= new Users();

@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="712969e0-4917-4c47-a9ba-ed85458f9b67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/localizacion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Controler/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Controler/FrontController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Controler/FrontController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Controler/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Entities/Bookings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Entities/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Services/IServiceUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Services/ImpleServiceUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/repositories/IRepositoryUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/resources/static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/src/main/resources/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20220814 tesis_GR.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20220821 tesis_GR.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20220821_1_tesis_GR.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20220821_2_tesis_GR.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JDASoft" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JDASoft.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tesis_EIS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tesis_GR" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +38,33 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,19 +87,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/EQUIPO/Documents/GitHub/FARMFOLIO_SIG/Restless-Turismo/demo/src/main/resources/templates&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/Restless-Turismo-alejandro/demo",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\EQUIPO\Documents\GitHub\FARMFOLIO_SIG\Restless-Turismo\demo\src\main\resources\templates" />
