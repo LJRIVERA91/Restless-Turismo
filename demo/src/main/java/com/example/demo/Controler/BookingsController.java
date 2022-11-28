@@ -29,7 +29,7 @@ public class BookingsController {
         public RedirectView createBooking(@ModelAttribute @DateTimeFormat(pattern = "YYYY-MM-DD") Bookings booking,Model model){
                     model.addAttribute(booking);
                     this.service.save(booking);
-                    System.out.println("Se guardo reserva con exito");
+                    System.out.println(booking);
                     return new RedirectView("/inicio1");
 
         }
