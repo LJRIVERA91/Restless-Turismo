@@ -36,14 +36,17 @@ public class Bookings {
     @JoinColumn(name="Booking_Users")
     //UNIDO AL OBJETO Users que es una entidad
    private  Users user;
-    //SECCION 4__________________________________________CONTRUCTOR_______________________________________________________________
-    @ManyToOne
-    @JoinColumn(name="id_hotel")
-   private Hotel hotel;
+    //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
 
+
+    //ManyToOne: DEFINI
+    // CION  Many: muchas ciudades (la clase ciudad)
+    //ManyToOne: DEFINICION  One: un departamento (la variable departmento)
     @ManyToOne
-    @JoinColumn(name="id_restaurante")
-    private Restaurante restaurante;
+    //COLUMNA LLAVE FORANES (FK) de esta clase City unida a:
+    @JoinColumn(name="Bookings_supplier")
+    //UNIDO AL OBJETO Users que es una entidad
+    private  Bookings bookings;
 //SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
 
     public Bookings(){
@@ -92,6 +95,14 @@ public class Bookings {
         this.descripcion = descripcion;
     }
 
+    public Bookings getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Bookings bookings) {
+        this.bookings = bookings;
+    }
+
     public Users getUser() {
         return user;
     }
@@ -100,19 +111,5 @@ public class Bookings {
         this.user = user;
     }
 
-    public Hotel getHotel() {
-        return hotel;
-    }
 
-    public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
-    }
-
-    public Restaurante getRestaurante() {
-        return restaurante;
-    }
-
-    public void setRestaurante(Restaurante restaurante) {
-        this.restaurante = restaurante;
-    }
 }

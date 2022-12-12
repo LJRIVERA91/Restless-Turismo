@@ -2,7 +2,12 @@ package com.example.demo.repositories;
 
 import com.example.demo.Entities.Category;
 import com.example.demo.Entities.City;
+import com.example.demo.Entities.Department;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 //**********************************************************************************************************************
 //__________________________________________QUE ES UN REPOSITORIO?_____________________________________________________*
 
@@ -18,5 +23,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //**********************************************************************************************************************
 
 public interface IRepositoryCity extends JpaRepository<City,Long> {
+    //@Query=anotacion para hacer consulta
+
+
+
+
+    @Query(value ="SELECT * FROM city u WHERE u.city_departamento = :id",nativeQuery = true)
+
+    //@Param=pasa los datos del id a param para enviarlo a la consulta @Query
+    List<City> findByDepartment( @Param("id") long id);  //busca por nombre de departamnwto q contiene una ciudad
 
 }

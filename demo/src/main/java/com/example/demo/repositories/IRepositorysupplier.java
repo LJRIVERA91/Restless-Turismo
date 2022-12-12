@@ -1,9 +1,13 @@
 package com.example.demo.repositories;
 
-import com.example.demo.Entities.Department;
-import com.example.demo.Entities.Users;
+
+import com.example.demo.Entities.City;
+import com.example.demo.Entities.supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 //**********************************************************************************************************************
 //__________________________________________QUE ES UN REPOSITORIO?_____________________________________________________*
 
@@ -18,6 +22,10 @@ import org.springframework.data.repository.CrudRepository;
 //__________CrudRepository <Users,Long> Long: ES EL TIPO DE DATO DE LA LLAVE PRIMARIA _________________________________*
 //**********************************************************************************************************************
 
-public interface IRepositoriyDepartment extends JpaRepository<Department,Long> {
-    Department findBynombre(String nombre);  //busca por nombre ya que alli esta alojado el nombre del departamneto
+public interface IRepositorysupplier extends JpaRepository<supplier,Long> {
+    @Query(value ="SELECT * FROM supplier u WHERE u.supplier_category= :id AND u.supplier_city = :id1",nativeQuery = true)
+
+        //@Param=pasa los datos del id a param para enviarlo a la consulta @Query
+    List<supplier> findBysupplier(@Param("id") long id,@Param("id1") long id1);  //busca por nombre de departamnwto q contiene una ciudad
+
 }

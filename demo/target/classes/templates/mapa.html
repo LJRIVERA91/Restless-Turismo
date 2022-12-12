@@ -41,26 +41,29 @@
     </style>
 
     <!--AQUI LLENO LA LISTA DE DEPARTMANETOS_______________________________________________________________________  -->
-    <select name="select-location" id="select-location">
 
+    <!--th:field="*{lista}"> ESTO RECUPERA EL OBJETO Q SE SELECIONO  -->
+    <select class="select-location"  id="select-location" >
+        <option value="">Seleccione una opción</option>
         <option th:each="option : ${lista}"
-                th:value="${option.coodenadas}"
+                th:value="${option.nombre}",
                 th:text="${option.nombre}"></option>
     </select>
+
     <!--___________________________________________________________________________________________________________  -->
     <!--AQUI LLENO LA LISTA DE  CIUDADES_______________________________________________________________________  -->
-    <select name="select-location" id="select-location2">
+    <select class="select2" id="select2">
+        <option value="">Seleccione una opción</option>
 
-        <option th:each="option : ${listaCity}"
-                th:value="${option.coodenadas}"
-                th:text="${option.nombre}"></option>
     </select>
     <!--___________________________________________________________________________________________________________  -->
 
     <!--AQUI LLENO LA LISTA DE CATEGORIAS_______________________________________________________________________  -->
-    <select name="select-location" id="select-location1">
+    <select class="select3" id="select3">
+        <option value="">Seleccione una opción</option>
 
         <option th:each="option : ${listaCategoy}"
+                th:value="${option.id}",
                 th:text="${option.nombre}"></option>
     </select>
     <!--___________________________________________________________________________________________________________  -->
@@ -81,12 +84,7 @@
 
 </head>
 <body>
-<script>
-          #wsw{
-             background-color: yellow;
-          }
 
-</script>
 
 
 <!-- esta funcion traer las coordenadas del usuario-->
@@ -98,62 +96,6 @@
 
 </div>
 
-
-<script>
-        function finME(){
-            //<!-- condicion si no se logran geolocalizar imprimir en mappi soporta sino no soporta-->
-            var output= document.getElementById('mapii');
-            if(navigator.geolocation){
-                output.innerHTML ="<p>soporta</p>";
-                navigator.geolocation.getCurrentPosition(localiz,nolocaliz);
-
-                }
-            else{output.innerHTML ="<p> no soporta</p>";}
-        }
-
-
-        function localiz(pos){
-            console.log("entro----------------geo");
-            var latitude= pos.coords.latitude;
-            var longitude=pos.coords.longitude;
-            const dict_values = {latitude, longitude};
-            const s = JSON.stringify(dict_values);
-            console.log(s);
-            window.alert(s)//<!-- se genera alerta con coordenadas-->
-            //<!-- se envia por ajax las coordenadas-->
-                    $.ajax({
-                        url:"/localizacion",
-                        type:"POST",
-                        contentType: "application/json",
-                        data: JSON.stringify(s)});
-        }
-
-        function nolocaliz(err){
-            console.log("eerr----------------geo");
-            console.warn(err.message);
-            let msg;
-            switch(err.code) {
-                case err.PERMISSION_DENIED:
-                    msg = "No nos has dado permiso para obtener tu posición";
-                    break;
-                case err.POSITION_UNAVAILABLE:
-                    msg = "Tu posición actual no está disponible";
-                    break;
-                 case err.TIMEOUT:
-                     msg = "No se ha podido obtener tu posición en un tiempo prudencial";
-                     break;
-                 default:
-                     msg = "Error desconocido";
-                     break;
-            }
-            posElt.textContent = msg;
-        }
-
-
-
-</script>
-
-
 <div class="folium-map" id="map_55aeaabb143d98c606755677e0c78bff"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -161,8 +103,16 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-<script>    
-    
+<script src="/jquery.js"></script>
+<script>
+
+// ENVIA LAS COORDENADAS AL MAPA Y LO LLEVA A LA UBICAIO__________________________________________________
+  document.getElementById('select2').addEventListener('change', function(e){
+                    let coords = e.target.value.split(",");
+                    map_55aeaabb143d98c606755677e0c78bff.flyTo(coords,13);
+                    })
+
+// ESE CARGA UNA UBICAION POR DEFETO__________________________________________________
             var map_55aeaabb143d98c606755677e0c78bff = L.map(
                 "map_55aeaabb143d98c606755677e0c78bff",
                 {
@@ -171,12 +121,9 @@
                     zoom: 14,
                     zoomControl: true,
                     preferCanvas: false,
-                });
-
-                   document.getElementById('select-location').addEventListener('change', function(e){
-                    let coords = e.target.value.split(",");
-                    map_55aeaabb143d98c606755677e0c78bff.flyTo(coords,13);
-                    })
+                }
+            );
+// SE CRAGA EL MAPA DE OPENSTREET MAP__________________________________________________
 
             var tile_layer_addafe8bd8bd36973242735f47305518 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
@@ -184,75 +131,32 @@
             ).addTo(map_55aeaabb143d98c606755677e0c78bff);
 
 
-    
-            var feature_group_12c796169d094fd5b4fcb0c20292994d = L.featureGroup(
-                {}
-            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
 
-    
-            var tile_layer_cb4c4e87408d511c4331a512aa7511f3 = L.tileLayer(
-                "http://tile.openweathermap.org/map/pressure_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
-                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(feature_group_12c796169d094fd5b4fcb0c20292994d);
-        
-    
-            var feature_group_73715e2905321a177d184dc6ca202b62 = L.featureGroup(
-                {}
-            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
-        
-    
-            var tile_layer_5704dcf9adce91581e0df47072661a8f = L.tileLayer(
-                "http://tile.openweathermap.org/map/wind_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
-                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(feature_group_73715e2905321a177d184dc6ca202b62);
-        
-    
-            var feature_group_c5f4655bf7a60a22f6702036d4f35dc2 = L.featureGroup(
-                {}
-            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
-        
-    
-            var tile_layer_6dc68ebd8ceaecbc9d249495f1911a92 = L.tileLayer(
-                "http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
-                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(feature_group_c5f4655bf7a60a22f6702036d4f35dc2);
-        
-    
-            var feature_group_34fdabf361e19a9980a4794a1277d8b9 = L.featureGroup(
-                {}
-            ).addTo(map_55aeaabb143d98c606755677e0c78bff);
-        
-    
-            var tile_layer_e818d837ab9d13da650a824c9a4606c0 = L.tileLayer(
-                "http://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=d22d9a6a3ff2aa523d5917bbccc89211",
-                {"attribution": "\u0026copy; \u003ca href=\"http://owm.io\"\u003eVANE\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(feature_group_34fdabf361e19a9980a4794a1277d8b9);
-        
-    
+
             var feature_group_46b3488c1943b112ae03fdd7afdaad2b = L.featureGroup(
                 {}
             ).addTo(map_55aeaabb143d98c606755677e0c78bff);
-        
-    
+
+//COORDENADAS DE LA MARCA DE POSIION__________________________________________________________
             var marker_6fbbd4bf879b492832bf566f56448518 = L.marker(
                 [6.1966791, -75.5625925],
                 {}
             ).addTo(feature_group_46b3488c1943b112ae03fdd7afdaad2b);
-        
-    
+
+
         var popup_9d74162267613a8640be8a14a54f32d7 = L.popup({"maxWidth": "100%"});
 
-        
+
             var html_0abbc33747bdc8378b3d3bd830a02cce = $(`<div id="html_0abbc33747bdc8378b3d3bd830a02cce" style="width: 100.0%; height: 100.0%;">estas aqui</div>`)[0];
             popup_9d74162267613a8640be8a14a54f32d7.setContent(html_0abbc33747bdc8378b3d3bd830a02cce);
-        
+
 
         marker_6fbbd4bf879b492832bf566f56448518.bindPopup(popup_9d74162267613a8640be8a14a54f32d7)
         ;
 
-        
-    
-    
+
+
+
             var layer_control_38f00efbfe8a05705e3e4bb5dc561235 = {
                 base_layers : {
                     "openstreetmap" : tile_layer_addafe8bd8bd36973242735f47305518,
@@ -270,6 +174,5 @@
                 layer_control_38f00efbfe8a05705e3e4bb5dc561235.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
             ).addTo(map_55aeaabb143d98c606755677e0c78bff);
-        
 
 </script>
