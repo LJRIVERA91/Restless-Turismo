@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="712969e0-4917-4c47-a9ba-ed85458f9b67" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../../Restless-Turismo-alejandro.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Restless_version subida/Restless" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-23Nov.zip" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
@@ -83,6 +82,13 @@
       <change beforePath="$PROJECT_DIR$/../../20220821_2_tesis_GR.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JDASoft" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JDASoft.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/IRepositorysupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/IRepositorysupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mapa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/IRepositorysupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/IRepositorysupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mapa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Transaction.java" beforeDir="false" />
@@ -108,7 +114,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -154,7 +160,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/Restless/demo",
+    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/Restless-Turismo/demo",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",

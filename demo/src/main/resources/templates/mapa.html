@@ -67,6 +67,12 @@
                 th:text="${option.nombre}"></option>
     </select>
     <!--___________________________________________________________________________________________________________  -->
+    <!--AQUI LLENO LA LISTA DE  CIUDADES_______________________________________________________________________  -->
+    <select class="select4" id="select4">
+        <option value="">Seleccione una opción</option>
+
+    </select>
+    <!--___________________________________________________________________________________________________________  -->
 
 
 
@@ -107,7 +113,7 @@
 <script>
 
 // ENVIA LAS COORDENADAS AL MAPA Y LO LLEVA A LA UBICAIO__________________________________________________
-  document.getElementById('select2').addEventListener('change', function(e){
+  document.getElementById('select4').addEventListener('change', function(e){
                     let coords = e.target.value.split(",");
                     map_55aeaabb143d98c606755677e0c78bff.flyTo(coords,13);
                     })

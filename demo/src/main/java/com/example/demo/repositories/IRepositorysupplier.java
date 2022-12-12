@@ -23,7 +23,7 @@ import java.util.List;
 //**********************************************************************************************************************
 
 public interface IRepositorysupplier extends JpaRepository<supplier,Long> {
-    @Query(value ="SELECT * FROM supplier u WHERE u.supplier_category= :id AND u.supplier_city = :id1",nativeQuery = true)
+    @Query(value ="SELECT * FROM supplier u WHERE u.supplier_city= :id AND u.supplier_category = :id1",nativeQuery = true)
 
         //@Param=pasa los datos del id a param para enviarlo a la consulta @Query
     List<supplier> findBysupplier(@Param("id") long id,@Param("id1") long id1);  //busca por nombre de departamnwto q contiene una ciudad

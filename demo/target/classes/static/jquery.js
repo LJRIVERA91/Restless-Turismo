@@ -72,20 +72,20 @@ function loadSupplier() {
      //dataType=formato de retorno
                 dataType: 'json',
                 success: function (data) {
-
-                var myPts = L.layerGroup();
+                                                //$(".select2").empty()=UBICACION DEL SELECT A LLENAR
+                                                $(".select4").empty();
+                                                //for= RECORRO EL JSON
                                                 for(var i=0;i < data.length;i++)
                                                 {
                                                 //newrow= VARIABEL QUE AGREGA LOS OBJETOS
-
-                                                var x = L.marker([data[i].coordenadas]).bindPopup(data[i].id);
-                                                myPts.addLayer(x);
-
-                                                }
+                                                var newrow ="<option id="+data[i].id+" value="+data[i].coordeadas+">"+data[i].nombre+"</option>";
+                                                //SE AGREGAN LAS OPCIONES
+                                                 $(newrow).appendTo(".select4");
 
 
-                                                var marker_6fbbd4bf879b492832bf566f56448518 =myPts.addTo(feature_group_46b3488c1943b112ae03fdd7afdaad2b);
-                                                }
+                                                 //UBICACION DE LA CIUDAD
+
+                                                }}
 
 
             });
