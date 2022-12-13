@@ -47,42 +47,6 @@ public class FrontController {
     }
 
 
-
-    @RequestMapping(value = "/booking/login/{Apellido}",method = RequestMethod.GET,produces="application/json")
-//@ResponseBody para indicar que el resultado del método lo vuelque en el cuerpo de la respuesta.
-
-    //@RequestBody convierte los datos json enviado por http de ID en formato variable para poder manipularlo
-    //@PathVariable busca en la url el [id] y lo transforma en el tipo long ej: http://localhost:8080/Users/public/login/1
-    //MODEL: ES UN CONTENEDOR QUE LLEVA DATOS AL HTML
-    public String findById (Model model ,@PathVariable String Apellido) {
-        // System.out.println(id);
-
-        //SE ENVIA EL CORREO PARA LLEVARLO A LA URL ____________________________________________________________________
-        String correo=Apellido;
-          model.addAttribute("correo",correo);
-        //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
-
-        //CARGO LA LISTA DE OBJETOS DE DEPARTAMENTOS____________________________________________________________________
-        List<Department> lista=this.ServiceDepartment.listDepartmen();
-        //ENVIA LOS DATO AL HTML
-        model.addAttribute("lista",lista);
-
-
-        //CARGO LA LISTA DE OBJETOS DE CIUDADES____________________________________________________________________
-        List<City> listaCity=this.ServiceCity.listCity();
-        //ENVIA LOS DATO AL HTML
-        model.addAttribute("listaCity",listaCity);
-
-
-        //CARGO LA LISTA DE OBJETOS DE CATEGORIA____________________________________________________________________
-        List<Category> listaCategoy=this.ServiceCategory.listCategory();
-        //ENVIA LOS DATO AL HTML
-        model.addAttribute("listaCategoy",listaCategoy);
-
-
-        return "mapa";
-    }
-
     @RequestMapping(value = "/booking/new/{Correo}",method = RequestMethod.GET,produces="application/json")
 //@ResponseBody para indicar que el resultado del método lo vuelque en el cuerpo de la respuesta.
 
@@ -134,6 +98,9 @@ public class FrontController {
 
         return "reserva";
     }
+
+
+
 
 
 

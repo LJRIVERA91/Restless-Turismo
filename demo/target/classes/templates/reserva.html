@@ -14,6 +14,7 @@
         <input th:field="*{descripcion}"   class="form-control" type="text" placeholder="Descripcion"/>
         <input th:field="*{fecha}" class="form-control" type="date">
         <input th:field="*{hora}" class="form-control" type="time">
+<<<<<<< HEAD
         <input th:value="${id}"  name="id" type="hidden">
         <label for="inlineFormSelectPref" class="form-label">Categoria</label>
         <select  class="form-select" id="inlineFormSelectPref" th:field="*{category}">
@@ -22,6 +23,9 @@
                     th:text="${lista.nombre}"
                     th:select="false"></option>
         </select>
+=======
+        <input th:field="*{user}" th:value="${id}" class="form-control" type="hidden">
+>>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
         <h1 th:text="${id}"></h1>
         <div class="form-footer">
             <button type="submit" class="btn btn-primary">reservar</button>

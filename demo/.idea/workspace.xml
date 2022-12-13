@@ -5,6 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="712969e0-4917-4c47-a9ba-ed85458f9b67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Restless-Turismo-alejandro.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-23Nov.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/FacturaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/HabitacionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/ReservaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/ServicioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/factura/FacturaDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/factura/IFacturaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/habitacion/HabitacionDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/habitacion/IHabitacionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/reserva/IReservaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/reserva/ReservaDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/servicio/IServicioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/servicio/ServicioDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/usuario/IUsuarioDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Dao/usuario/UsuarioDaoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Entity/Factura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Entity/Habitacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Entity/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Entity/Servicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Repository/RepositoryFactura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Repository/RepositoryHabitacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Repository/RepositoryReserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Repository/RepositoryServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Repository/RepositoryUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/factura/FacturaServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/factura/IFacturaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/habitacion/HabitacionServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/habitacion/IHabitacionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/reserva/IReservaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/reserva/ReservaServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/servicio/IServicioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/servicio/ServicioServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/usuario/IUsuarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/Service/usuario/UsuarioServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/java/com/example/Springreserva/SpringReservaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/factura/listarFactura.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/factura/registrarFactura.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/habitacion/listarHabitacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/habitacion/registrarHabitacion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/reserva/listarReserva.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/reserva/registrarReserva.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/servicio/listarServicio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/servicio/registrarServicio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/usuario/listarUsuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/pages/usuario/registrarUsuario.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/main/resources/templates/partials/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SistemaHotel-SpringBoot-cff175478b1b4f69324cef690ae159c9d677e731/src/test/java/com/example/Springreserva/SpringReservaApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Controler/FrontController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Controler/UserController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Entities/Bookings.java" afterDir="false" />
@@ -23,6 +82,13 @@
       <change beforePath="$PROJECT_DIR$/../../20220821_2_tesis_GR.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JDASoft" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JDASoft.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/IRepositorysupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/IRepositorysupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mapa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/IRepositorysupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/IRepositorysupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mapa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../demo/src/main/java/com/example/demo/Transaction.java" beforeDir="false" />
@@ -42,13 +108,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -94,7 +160,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/Restless-Turismo-alejandro/demo",
+    "last_opened_file_path": "C:/Users/Usuario/Documents/GitHub/Restless-Turismo/demo",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",

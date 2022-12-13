@@ -40,11 +40,25 @@ public class Bookings {
     @JoinColumn(name="Booking_Users")
     //UNIDO AL OBJETO Users que es una entidad
    private  Users user;
+<<<<<<< HEAD
     //SECCION 4__________________________________________CONTRUCTOR_______________________________________________________________
     @ManyToOne
     @JoinColumn(name="id_category")
    private Category category;
 
+=======
+    //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
+
+
+    //ManyToOne: DEFINI
+    // CION  Many: muchas ciudades (la clase ciudad)
+    //ManyToOne: DEFINICION  One: un departamento (la variable departmento)
+    @ManyToOne
+    //COLUMNA LLAVE FORANES (FK) de esta clase City unida a:
+    @JoinColumn(name="Bookings_supplier")
+    //UNIDO AL OBJETO Users que es una entidad
+    private  Bookings bookings;
+>>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
 //SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
 
     public Bookings(){
@@ -95,12 +109,21 @@ public class Bookings {
         this.descripcion = descripcion;
     }
 
+<<<<<<< HEAD
     public boolean getEstado() {
         return this.estado;
     }
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+=======
+    public Bookings getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Bookings bookings) {
+        this.bookings = bookings;
+>>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
     }
 
     public Users getUser() {
@@ -111,6 +134,7 @@ public class Bookings {
         this.user = user;
     }
 
+<<<<<<< HEAD
     public Category getCategory() {
         return category;
     }
@@ -118,4 +142,7 @@ public class Bookings {
     public void setCategory(Category category) {
         this.category = category;
     }
+=======
+
+>>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
 }

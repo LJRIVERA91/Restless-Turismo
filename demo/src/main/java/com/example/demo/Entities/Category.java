@@ -17,18 +17,30 @@ public class Category {
     //@Column crea la columna nombre
     @Column(name = "nombre")
     private String nombre;
+    //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
+
+
+
 
     //SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
-
-    public Category() {
-    }
 
     public Category(long id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
 
+
+
+    public Category() {
+    }
+
+
+
+
+
     //SECCION 5__________________________________________GETTER AND SETTER______________________________________________
+
+
 
 
     public long getId() {

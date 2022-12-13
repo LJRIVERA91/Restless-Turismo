@@ -1,7 +1,7 @@
 package com.example.demo.Entities;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+
 //(BD)@Entity :CREA LA TABLA (Department) EN BASE EN LA CLASE  (Department)
 @Entity
 //@Table:CREO LA ENTIDAD (Department) EN LA BASE DE DATOS
@@ -42,9 +42,7 @@ public class Department {
     //SECCION 5__________________________________________GETTER AND SETTER______________________________________________
 
 
-    public long getId() {
-        return id;
-    }
+    public long getId() { return id;}
 
     public void setId(long id) {
         this.id = id;
