@@ -6,27 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e677dda2-d0cb-4723-9198-55775365c35f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controler/BookingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controler/BookingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controler/FrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Controler/FrontController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Entities/Bookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Entities/Bookings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Entities/Hotel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Entities/Restaurant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Services/IServiceCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Services/IServiceCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Services/ImpleServiceCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/Services/ImpleServiceCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repositories/IRepositoryCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/repositories/IRepositoryCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/mapa.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/resources/templates/reserva.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/templates/reserva.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Controler/BookingsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Controler/BookingsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Controler/FrontController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Controler/FrontController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Entities/Bookings.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Entities/Bookings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Entities/Hotel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Entities/Restaurant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Services/IServiceCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Services/IServiceCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Services/ImpleServiceCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/Services/ImpleServiceCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/repositories/IRepositoryCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/repositories/IRepositoryCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/mapa.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/mapa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/templates/reserva.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/templates/reserva.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

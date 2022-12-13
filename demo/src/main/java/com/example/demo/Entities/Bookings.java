@@ -14,7 +14,7 @@ public class Bookings {
     //@Id :SEÑALA QUE EL ATRIBUTO DESPUES ES LA PRIMARY KEY
     @Id
     //@GeneratedValue :LE DA UN VALOR AUTOMATICO AL ATRIBUTO DEACUERDO A UN FUNCION EN ESTA CASO AUTO INCREMENTANDO
-    @GeneratedValue(strategy = GenerationType.AUTO )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     //id :CONTIENE LO DEFINIDO EN @Id Y @GeneratedValue
     private long id;
     @Column(name = "fecha")
@@ -37,16 +37,16 @@ public class Bookings {
     //ManyToOne: DEFINICION  One: un Usuario (la variable Users)
     @ManyToOne
     //COLUMNA LLAVE FORANES (FK)
-    @JoinColumn(name="Booking_Users")
+    @JoinColumn(name = "Booking_Users")
     //UNIDO AL OBJETO Users que es una entidad
-   private  Users user;
-<<<<<<< HEAD
+    private Users user;
+
     //SECCION 4__________________________________________CONTRUCTOR_______________________________________________________________
     @ManyToOne
-    @JoinColumn(name="id_category")
-   private Category category;
+    @JoinColumn(name = "id_category")
+    private Category category;
 
-=======
+
     //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
 
 
@@ -55,23 +55,23 @@ public class Bookings {
     //ManyToOne: DEFINICION  One: un departamento (la variable departmento)
     @ManyToOne
     //COLUMNA LLAVE FORANES (FK) de esta clase City unida a:
-    @JoinColumn(name="Bookings_supplier")
+    @JoinColumn(name = "Bookings_supplier")
     //UNIDO AL OBJETO Users que es una entidad
-    private  Bookings bookings;
->>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
+    private Bookings bookings;
+
 //SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
 
-    public Bookings(){
-            //user= new Users();
+    public Bookings() {
+        //user= new Users();
     }
 
-    public Bookings(LocalDate fecha, String hora, String descripcion, boolean estado, Users user,Category category) {
+    public Bookings(LocalDate fecha, String hora, String descripcion, boolean estado, Users user, Category category) {
         this.fecha = fecha;
         this.hora = hora;
         this.descripcion = descripcion;
-        this.estado=estado;
+        this.estado = estado;
         this.user = user;
-        this.category=category;
+        this.category = category;
     }
 
     //SECCION 5__________________________________________GETTER AND SETTER_________________________________________________________________
@@ -109,23 +109,16 @@ public class Bookings {
         this.descripcion = descripcion;
     }
 
-<<<<<<< HEAD
+
     public boolean getEstado() {
         return this.estado;
     }
 
     public void setEstado(boolean estado) {
         this.estado = estado;
-=======
-    public Bookings getBookings() {
-        return bookings;
-    }
 
-    public void setBookings(Bookings bookings) {
-        this.bookings = bookings;
->>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
-    }
 
+    }
     public Users getUser() {
         return user;
     }
@@ -134,7 +127,6 @@ public class Bookings {
         this.user = user;
     }
 
-<<<<<<< HEAD
     public Category getCategory() {
         return category;
     }
@@ -142,7 +134,12 @@ public class Bookings {
     public void setCategory(Category category) {
         this.category = category;
     }
-=======
 
->>>>>>> 36df23665b4343d70651e0f0d1ac55a2cec55279
+    public Bookings getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Bookings bookings) {
+        this.bookings = bookings;
+    }
 }
