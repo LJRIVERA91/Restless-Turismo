@@ -2,6 +2,7 @@ package com.example.demo.repositories;
 
 import com.example.demo.Entities.Category;
 import com.example.demo.Entities.Department;
+import com.example.demo.Entities.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 //**********************************************************************************************************************
 //__________________________________________QUE ES UN REPOSITORIO?_____________________________________________________*
@@ -18,4 +19,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 //**********************************************************************************************************************
 
 public interface IRepositoryCategory extends JpaRepository<Category,Long> {
+    Category findBynombre(String nombre);
 }

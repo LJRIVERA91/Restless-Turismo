@@ -14,9 +14,20 @@
         <input th:field="*{descripcion}"   class="form-control" type="text" placeholder="Descripcion"/>
         <input th:field="*{fecha}" class="form-control" type="date">
         <input th:field="*{hora}" class="form-control" type="time">
-        <input th:field="*{user}" id="user" class="form-control" type="hidden">
+        <input th:value="${id}"  name="id" type="hidden">
+        <label for="inlineFormSelectPref" class="form-label">Categoria</label>
+        <select  class="form-select" id="inlineFormSelectPref" th:field="*{category}">
+            <option selected th:each="lista : ${listaCategory}"
+                    th:value="${lista.id}"
+                    th:text="${lista.nombre}"
+                    th:select="false"></option>
+        </select>
         <h1 th:text="${id}"></h1>
-        <button  class="btn btn-primary" type="submit">Reservar</button>
+        <div class="form-footer">
+            <button type="submit" class="btn btn-primary">reservar</button>
+            <button type="reset" class="btn btn-secondary">Cancel</button>
+        </div>
+
     </form>
 </div>
 

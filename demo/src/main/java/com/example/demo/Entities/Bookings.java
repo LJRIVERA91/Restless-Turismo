@@ -26,6 +26,10 @@ public class Bookings {
     @Column(name = "descripcion")
     private String descripcion;
 
+    @Column(name = "estado")
+    private boolean estado;
+
+
     //SECCION 3________________________________CARDINALIDA O LLAVES FORENAEAS________________________________________________________________
 
 
@@ -38,23 +42,22 @@ public class Bookings {
    private  Users user;
     //SECCION 4__________________________________________CONTRUCTOR_______________________________________________________________
     @ManyToOne
-    @JoinColumn(name="id_hotel")
-   private Hotel hotel;
+    @JoinColumn(name="id_category")
+   private Category category;
 
-    @ManyToOne
-    @JoinColumn(name="id_restaurante")
-    private Restaurante restaurante;
 //SECCION 4__________________________________________CONTRUCTOR_____________________________________________________
 
     public Bookings(){
             //user= new Users();
     }
 
-    public Bookings(LocalDate fecha, String hora, String descripcion, Users user) {
+    public Bookings(LocalDate fecha, String hora, String descripcion, boolean estado, Users user,Category category) {
         this.fecha = fecha;
         this.hora = hora;
         this.descripcion = descripcion;
+        this.estado=estado;
         this.user = user;
+        this.category=category;
     }
 
     //SECCION 5__________________________________________GETTER AND SETTER_________________________________________________________________
@@ -92,6 +95,14 @@ public class Bookings {
         this.descripcion = descripcion;
     }
 
+    public boolean getEstado() {
+        return this.estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
     public Users getUser() {
         return user;
     }
@@ -100,19 +111,11 @@ public class Bookings {
         this.user = user;
     }
 
-    public Hotel getHotel() {
-        return hotel;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
-    }
-
-    public Restaurante getRestaurante() {
-        return restaurante;
-    }
-
-    public void setRestaurante(Restaurante restaurante) {
-        this.restaurante = restaurante;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

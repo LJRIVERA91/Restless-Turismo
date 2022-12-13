@@ -40,6 +40,11 @@
 
     </style>
 
+    <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+         th:text="${mensaje}"
+         class="alert">
+    </div>
+
     <!--AQUI LLENO LA LISTA DE DEPARTMANETOS_______________________________________________________________________  -->
     <select name="select-location" id="select-location">
 
@@ -70,6 +75,7 @@
     <div class="my-2" mx-2>
         <form>
             <a th:href=" @{'/booking/new/'+ ${correo}}" class="btn btn-secondary" type="submit">Reservar</a>
+
         </form>
     </div>
     <div class="my-2" mx-2>

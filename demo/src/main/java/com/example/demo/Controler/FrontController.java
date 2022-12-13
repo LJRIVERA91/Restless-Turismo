@@ -16,6 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.net.http.HttpClient;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class FrontController {
@@ -35,7 +36,7 @@ public class FrontController {
 
     @RequestMapping(method = RequestMethod.GET,value="/")
     //@ResponseBody para indicar que el resultado del método lo vuelque en el cuerpo de la respuesta.
-    public String home(Model model, @AuthenticationPrincipal OidcUser principal){
+    public String home(Model model, @AuthenticationPrincipal OidcUser principal ){
         if (principal != null){
 
             Users user=ServicioUser.buscaryguardar(principal.getClaims());
@@ -96,8 +97,28 @@ public class FrontController {
 
     @GetMapping("/user")
     public String users(Model model){
-        List<Users> users=this.ServicioUser.findall();
-        model.addAttribute("users",users);
+        //ServicioUser SE UTILIZA LOS SERVICIOS DE LA INTERFAZ PARA ACCEDER A LOS METODOS DEL SERVICIO
+
+        //CARGO LA LISTA DE OBJETOS DE DEPARTAMENTOS____________________________________________________________________
+        List<Department> lista=this.ServiceDepartment.listDepartmen();
+        //ENVIA LOS DATO AL HTML
+        model.addAttribute("lista",lista);
+
+
+        //CARGO LA LISTA DE OBJETOS DE CIUDADES____________________________________________________________________
+        List<City> listaCity=this.ServiceCity.listCity();
+        //ENVIA LOS DATO AL HTML
+        model.addAttribute("listaCity",listaCity);
+
+
+        //CARGO LA LISTA DE OBJETOS DE CATEGORIA____________________________________________________________________
+        List<Category> listaCategoy=this.ServiceCategory.listCategory();
+        //ENVIA LOS DATO AL HTML
+        model.addAttribute("listaCategoy",listaCategoy);
+
+
+    /*    List<Users> users=this.ServicioUser.findall();
+        model.addAttribute("users",users);*/
         return "mapa";
     }
     @GetMapping("/bookings/news/{Correo}")
@@ -107,6 +128,10 @@ public class FrontController {
         if(users!=null) {
             model.addAttribute("id", users.getId());
         }
+        List<Category> listaCategoy=this.ServiceCategory.listCategory();
+        //ENVIA LOS DATO AL HTML
+        model.addAttribute("listaCategory",listaCategoy);
+
         return "reserva";
     }
 
